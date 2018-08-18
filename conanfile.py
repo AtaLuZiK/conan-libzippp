@@ -15,7 +15,7 @@ class LibzipppConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     requires = "libzip/%s@zimmerk/stable" % libzip_version
-    exports_sources = "CMakeLists.txt"
+    exports_sources = "CMakeLists.txt", "libzippp-config.cmake"
     generators = "cmake"
 
     @property
